@@ -12,7 +12,7 @@ let tail = function(array) {
     shifted.push(array[i]);
   }
   return shifted;
-};
+};  
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words);

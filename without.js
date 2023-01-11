@@ -1,15 +1,22 @@
 let assertArraysEqual = function(firstArray, secondArray) {
-  let trueStatement = `💚 Assertion passed: ${firstArray} === ${secondArray}`;
-  let falseStatement = `💔 Assertion failed: ${firstArray} !== ${secondArray}`;
+  if (eqArrays(firstArray, secondArray) === true) {
+    return console.log(`💚 Assertion passed: ${firstArray} === ${secondArray}`);
+  } else {
+    return console.log(`💔 Assertion failed: ${firstArray} !== ${secondArray}`);
+  }
+};
+
+
+let eqArrays = function(firstArray, secondArray) {
   if (firstArray.length !== secondArray.length) {
-    return console.log(falseStatement);
+    return false;
   }
   for (let i = 0; i < firstArray.length; i++) {
     if (firstArray[i] !== secondArray[i]) {
-      return console.log(falseStatement);
+      return false;
     }
   }
-  return console.log(trueStatement);
+  return true;
 };
 
 let without = function(source, itemsToRemove) {
