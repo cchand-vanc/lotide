@@ -24,14 +24,18 @@ let middle = function(input) {
   let evenMiddle1 = input[(input.length / 2) - 1];
   let evenMiddle2 = input[input.length / 2];
 
-  if (input.length % 2 !== 0) {
-    middlePoint.push(oddMiddle);
+  if (input.length > 2) {
+    if (input.length % 2 !== 0) {
+      middlePoint.push(oddMiddle);
+    } else {
+      middlePoint.push(evenMiddle1, evenMiddle2);
+    }
+    return middlePoint;
   } else {
-    middlePoint.push(evenMiddle1, evenMiddle2);
+    return middlePoint;
   }
-  return middlePoint;
 };
 
-middle([1, 2, 3, 4, 5, 6]);
-let secondArg = middle([1, 2, 3, 4, 5, 6]);
-assertArraysEqual([3,4], secondArg);
+console.log(middle([1, 2, 3, 4]));
+let secondArg = middle([1, 2, 3, 4]);
+assertArraysEqual([2,3], secondArg);
