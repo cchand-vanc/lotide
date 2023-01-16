@@ -6,8 +6,4 @@ let assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("the", "the");
-assertEqual("fox", "FOX");
-assertEqual(567, 567);
-assertEqual(123, 789);
-
+module.exports = assertEqual;
