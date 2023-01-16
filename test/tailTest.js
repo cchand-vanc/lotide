@@ -1,4 +1,6 @@
 const tail = require("../tail");
+const assertArraysEqual = require('../assertArraysEqual');
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
-console.log(tail(words));
+tail(words);
+assertArraysEqual(["Lighthouse", "Labs"], ["Lighthouse", "Labs"])
