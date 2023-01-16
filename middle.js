@@ -1,23 +1,3 @@
-let eqArrays = function(firstArray, secondArray) {
-  if (firstArray.length !== secondArray.length) {
-    return false;
-  }
-  for (let i = 0; i < firstArray.length; i++) {
-    if (firstArray[i] !== secondArray[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-let assertArraysEqual = function(firstArray, secondArray) {
-  if (eqArrays(firstArray, secondArray) === true) {
-    return console.log(`💚 Assertion passed: ${firstArray} === ${secondArray}`);
-  } else {
-    return console.log(`💔 Assertion failed: ${firstArray} !== ${secondArray}`);
-  }
-};
-
 let middle = function(input) {
   let middlePoint = [];
   let oddMiddle = input[Math.floor(input.length / 2)];
@@ -36,6 +16,4 @@ let middle = function(input) {
   }
 };
 
-console.log(middle([1, 2, 3, 4]));
-let secondArg = middle([1, 2, 3, 4]);
-assertArraysEqual([2,3], secondArg);
+module.exports = middle;
