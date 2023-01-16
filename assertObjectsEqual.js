@@ -17,7 +17,7 @@ let eqObjects = function(object1, object2) {
   for (let item of Object.keys(object1)) {
     if (Array.isArray(object1[item]) && Array.isArray(object2[item])) {
       if (eqArrays(object1[item], object2[item]) === true) {
-        return true; //This is the part that is throwing an error - not sure why. Ask instructor tomorow. Why is this not evaluating correctly?
+        return true; 
       }
     }
     if (object1[item] !== object2[item]) {
@@ -36,4 +36,4 @@ let assertObjectsEqual = function(actual, expected) {
   }
 };
 
-assertObjectsEqual({a: 1, b: 2}, {a: 1, b: 2});
+assertObjectsEqual(eqObjects({a: 1, b: 2}, {a: 1, b: 2}), true);

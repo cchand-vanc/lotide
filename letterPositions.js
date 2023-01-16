@@ -34,4 +34,4 @@ let letterPositions = function(sentence) {
   return results;
 };
 
-console.log(letterPositions("lighthouse is the lab"));
+assertArraysEqual(letterPositions("hello").e, [1]);
