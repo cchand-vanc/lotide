@@ -1,11 +1,3 @@
-let assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`💚 Assertion passed: ${actual} === ${expected}`);
-  } else {
-    return console.log(`💔 Assertion failed: ${actual} !== ${expected}`);
-  }
-};
-
 let countLetters = function(phrase) {
   let results = {};
   for (let letter of phrase) {
@@ -20,4 +12,4 @@ let countLetters = function(phrase) {
   return results;
 };
 
-console.log(countLetters("lighthouse in the house"));
+module.exports = countLetters;
